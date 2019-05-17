@@ -9,9 +9,9 @@ from conans.model.version import Version
 
 class AbseilConan(ConanFile):
     name = "abseil"
-    version = "20180600"
-    url = "https://github.com/bincrafters/conan-abseil"
-    homepage = "https://github.com/abseil/abseil-cpp"
+    version = "20190508"
+    url = "https://github.com/xor2003/conan-abseil"
+    homepage = "https://github.com/xor2003/abseil-cpp"
     author = "Bincrafters <bincrafters@gmail.com>"
     description = "Abseil Common Libraries (C++) from Google"
     license = "Apache-2.0"
@@ -21,7 +21,7 @@ class AbseilConan(ConanFile):
     settings = "os", "arch", "compiler", "build_type"
     requires = "cctz/2.2@bincrafters/stable"
     _source_subfolder = "source_subfolder"
-    _commit_id = "445998d7ac4e5d3c50411d377e3b50e960d2d6c2"
+    _commit_id = "cc9052024b6ab898d81b884c2999473d408b182f"
 
     def source(self):
         tools.get("{0}/archive/{1}.zip".format(self.homepage, self._commit_id))
